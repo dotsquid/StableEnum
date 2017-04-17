@@ -1,5 +1,5 @@
 # StableEnum
-Serialization of enums as string in Unity3d.  
+Serialization of enums as strings in Unity3d.  
 Kudos to my colleague [Vasyl Romanets](https://github.com/O1dSeaman) for an idea how to make this solution cleaner
 
 ## Problem
