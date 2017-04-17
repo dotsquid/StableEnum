@@ -6,29 +6,29 @@ Kudos to my colleague [Vasyl Romanets](https://github.com/O1dSeaman) for an idea
 Unity3d serializes enums as ints. This causes the problem when new values of enum are inserted before the last value: it "suddenly" turns out that previously serialized enums have wrong values.  
 Consider the following situation:
 ```
-enum Something
+enum MyEnum
 {
   Zero,    // 0
   One,     // 1
-  Several  // 2
+  Some     // 2
   Many     // 3
 }
 
-public Something something = Several;
+public MyEnum myEnum = MyEnum.Some;
 ```
-Public field `something` is serialized as 2.  
-Now, if we insert a new value between other values of `enum Something`:  
+Public field `myEnum` is serialized as 2.  
+Now, if we insert a new value between other values of `enum MyEnum`:  
 ```
-enum Something
+enum MyEnum
 {
   Zero,    // 0
   One,     // 1
   Two,     // 2
-  Several  // 3
+  Some     // 3
   Many     // 4
 }
 ```
-field `something` will have value `Two` instead of `Several`.  
+field `myEnum` will have value `Two` instead of `Some`.  
 Usually this behaviour is undesirable.
 
 ## Solution
