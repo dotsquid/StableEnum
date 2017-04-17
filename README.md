@@ -55,5 +55,5 @@ That's not possible, because cast operator is static, and therefore can't be inh
 However, StableEnum<T> has implementation of operator which casts from StableEnum<T> to T.  
 That's why you can do this with no additional code from your side:
 ```
-var enumValue = myEnum; // myEnum is an instance of the class derived from StableEnum
+MyEnum enumValue = myEnum; // myEnum is an instance of the class derived from StableEnum<MyEnum>
 ```
