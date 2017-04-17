@@ -1,5 +1,6 @@
 # StableEnum
-Serialization of enums as string in Unity3d
+Serialization of enums as string in Unity3d.  
+Kudos to my colleague [Vasyl Romanets](https://github.com/O1dSeaman) for an idea how to make this solution cleaner
 
 ## Problem
 Unity3d serializes enums as ints. This causes the problem when new values are inserted in enum: it "suddenly" turns out that previously serialized enums have wrong values.  
