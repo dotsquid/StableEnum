@@ -3,7 +3,7 @@ Serialization of enums as strings in Unity3d.
 Kudos to my colleague [Vasyl Romanets](https://github.com/O1dSeaman) for an idea how to make this solution cleaner
 
 ## Problem
-Unity3d serializes enums as ints. This causes the problem when new values of enum are inserted before the last value: it "suddenly" turns out that previously serialized enums have wrong values.  
+Unity3d serializes enums as ints. This causes the problem when new enumerators of enum are inserted before the last enumerator: it "suddenly" turns out that previously serialized enums have wrong values.  
 Consider the following situation:
 ```
 enum MyEnum
