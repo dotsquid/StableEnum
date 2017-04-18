@@ -17,7 +17,7 @@ enum MyEnum
 public MyEnum myEnum = MyEnum.Some;
 ```
 Public field `myEnum` is serialized as 2.  
-Now, if we insert a new value between other values of `enum MyEnum`:  
+Now, if we insert a new enumerator between other enumerators of `enum MyEnum`:  
 ```
 enum MyEnum
 {
