@@ -10,7 +10,7 @@ enum MyEnum
 {
   Zero,    // 0
   One,     // 1
-  Some     // 2
+  Some,    // 2
   Many     // 3
 }
 
@@ -24,7 +24,7 @@ enum MyEnum
   Zero,    // 0
   One,     // 1
   Two,     // 2
-  Some     // 3
+  Some,    // 3
   Many     // 4
 }
 ```
