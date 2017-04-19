@@ -39,6 +39,11 @@ public abstract class StableEnum<T> : BaseStableEnum, ISerializationCallbackRece
         }
     }
 
+    public override string ToString()
+    {
+        return _proxy;
+    }
+
     public static implicit operator T(StableEnum<T> stableEnum)
     {
         return stableEnum._value;
