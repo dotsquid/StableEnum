@@ -60,4 +60,5 @@ MyEnum enumValue = myEnum; // myEnum is an instance of the class derived from St
 
 ### Drawbacks
 As any thing in this world this solution has drawbacks.  
-Although now you can insert/remove enumerators in/from an enum, you can't rename your enumerators because on deserialization the string which represents the old value of enumerator will be attempted to be parsed as enum's enumerator which in turn does not exist. As a result enum will receive a default value (which is the first enumerator if default values of enumerators were not specified).
+Although now you can insert/remove enumerators in/from an enum, you can't rename your enumerators because on deserialization the string which represents the old value of enumerator will be attempted to be parsed as enum's enumerator which in turn does not exist. As a result enum will receive a default value (which is the first enumerator if default values of enumerators were not specified).  
+Also current version of StableEnums does not support bit field enumerations (e.g. those with FlagsAttribute).
