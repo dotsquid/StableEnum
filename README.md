@@ -39,7 +39,7 @@ Solution is simple: enum should be serialized as string instead of int.
 ### Usage
 Unfortunately Unity3d does not serialize generic classes (and another stuff, like interfaces).  
 That's why the first thing you have to do to use StableEnums in your project is to provide concrete derived classes of StableEnum<T> class for each enum you want to make *stable*.  
-You can use [ConcreteStableEnums.cs](Scripts/ConcreteStableEnums.cs) as an example of how to do that. You can put all your concrete classes right in this file.  
+You can use [ConcreteStableEnums.cs](https://gist.github.com/dotsquid/43a8178e70e04a85a32c65d29e0d37d8) as an example of how to do that. You can put all your concrete classes right in this file.  
 ##### Note
 It's not required to provide implicit cast operator.  
 If cast operator is not provided, you'll have to alter enum via `value` property. E.g.
