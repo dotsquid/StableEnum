@@ -5,13 +5,10 @@ using UnityEngine;
 
 [Serializable]
 public abstract class StableEnum<T> : BaseStableEnum, IEquatable<StableEnum<T>>, ISerializationCallbackReceiver
-                            where T : struct, IFormattable, IConvertible, IComparable
+                            where T : Enum
 {
     [SerializeField]
     protected T _value;
-
-    protected StableEnum()
-    { }
 
     public T value
     {
@@ -29,7 +26,7 @@ public abstract class StableEnum<T> : BaseStableEnum, IEquatable<StableEnum<T>>,
 
     public void OnAfterDeserialize()
     {
-        if (!StableEnumHelper.TryParse(_proxy, false, out _value))
+        if (!StableEnumHelper.TryParse(_proxy, out _value))
         {
             if (Enum.IsDefined(typeof(T), _index))
             {
@@ -42,7 +39,6 @@ public abstract class StableEnum<T> : BaseStableEnum, IEquatable<StableEnum<T>>,
         }
     }
 
-    public override string ToString() => _value.ToName();
     public bool Equals(StableEnum<T> other) => EqualityComparer<T>.Default.Equals(_value, other.value);
     public override bool Equals(object obj) => Equals(obj as StableEnum<T>);
     public override int GetHashCode() => _value.GetHashCode();

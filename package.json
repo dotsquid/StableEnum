@@ -1,0 +1,17 @@
+{
+  "name": "com.dotsquid.stableenum",
+  "displayName": "StableEnum",
+  "version": "1.0.0",
+  "unity": "2018.1",
+  "description": "Serialization of enums as strings in Unity3d.",
+  "keywords": [
+    "StableEnum",
+    "Enum",
+    "Enumeration"
+  ],
+  "author": {
+    "name": "dotsquid",
+    "email": "dotsquid@gmail.com",
+    "url": "https://github.com/dotsquid/StableEnum"
+  }
+}
