@@ -17,7 +17,7 @@ public class StableEnumDrawer : PropertyDrawer
         EditorGUI.showMixedValue = property.hasMultipleDifferentValues;
 
         var enumValue = (Enum)((BaseStableEnum)propObject).valueObject;
-        enumValue = EditorGUI.EnumPopup(position, label, enumValue);
+        enumValue = EditorGUI.EnumFlagsField(position, label, enumValue);
 
         EditorGUI.showMixedValue = false;
         if (EditorGUI.EndChangeCheck())
